@@ -2,16 +2,18 @@ body{
     margin: 0;
     padding: 0;
     font-size: 12px;
+    overflow-x: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav{
     display: flex;
-    width: 100%;
     padding: 1rem;
     justify-content: space-between;
     background-color: purple;
   }
 .nav__logo{
     margin-left: 14vw;
+    margin-bottom: 2vw;
 }
 .nav__menu{
     margin-right: 14vw;
@@ -39,10 +41,10 @@ body{
     text-decoration: none;
 }
 
-.nav__toggle{
+.nav__toggle,#show{
     display: none;
 }
-   
+
 .main{
     display: flex;
     justify-content: space-between;
@@ -54,7 +56,6 @@ body{
 }
 
 .home__title{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.8rem;
 }
 
@@ -79,56 +80,88 @@ body{
 
 .main__right{
     margin-right: 14vw;
+    margin-bottom: 3vh;
 }
 
 .main__right img{
     border-radius: 50%;
-    height:70vh;
-    width: 35vw;
+    height:65vh;
+    width: 32vw;
     margin-top: 5vh;
 }
+.footer{
+    background-color: #0E2431;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .footer__title{
+    font-size:1rem;
+    font-weight: bold;
+    margin-bottom: 3vh;
+  }
 
 @media screen and (max-width:768px) {
+    .nav__top{
+        display: flex;
+        justify-content: space-between;
+    }
     .nav{
         display: flex;
+        flex-direction: column;
         width: 100%;
-        padding: 1rem;
-        justify-content: space-between;
+        padding: 1rem 1rem 0 1rem;
         background-color: purple;
-      }
+    }
     .nav__logo{
-        margin-left: 14vw;
+        margin-left: 5vw;
     }
     .nav__menu{
-        margin-right: 14vw;
-    }
+        width: 105%;
+        margin-left:-8vw;   
+        background-color:rgba(177, 34, 177, 0.904);
+     }  
     .nav__logo a{
         text-decoration: none;
         color: white;
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
-    
-    
     .nav__list {
+        display: flex;
+        flex-direction: column;
         list-style: none;
-    
     }
     
     .nav__item{
         display: inline-block;
-        margin-left: 1rem;
+        margin-bottom:0.8rem;
     }
     
     .nav__item a{
         color: white;
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-decoration: none;
     }
     
     .nav__toggle{
         display: inline;
+        position: fixed;
+        margin-left: 80vw;
     }
-       
+
+    .nav__toggle i{
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .nav__toggle i:hover{
+        cursor: pointer;
+    }
+
+    #show,#nav-menu{display:none;}
+    #show:checked ~ #nav-menu{display:flex;}
+
     .main{
         display: flex;
         flex-direction: column;
@@ -136,8 +169,8 @@ body{
     }
     
     .main__left{
-        margin-top: 15vh;
-        margin-left: 15vw;
+        margin-top: 3vh;
+        margin-left: 10vw;
     }
     
     .home__title{
@@ -152,9 +185,9 @@ body{
     .button{
         background-color: purple;
         color: #fff;
-        padding: 0.5rem 1.5rem;
+        padding: 0.4rem 1.3rem;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-decoration: none;
         display: inline-block;
         border-radius:0.5rem;
@@ -165,13 +198,19 @@ body{
       }
     
     .main__right{
-        margin-left: 15vw;
+        margin-left: 25vw;
+        margin-bottom: 3vh;
     }
     
     .main__right img{
         border-radius: 50%;
         height:30vh;
-        width: 35vw;
+        width: 50vw;
         margin-top: 5vh;
     }
-}
+    .footer__title{
+        font-size:0.8rem;
+        font-weight: bold;
+        margin-bottom: 3vh;
+      }
+    }
