@@ -1,0 +1,136 @@
+#portfolio-right{
+    grid-area:portfolio-right;
+    margin-left: 5vw;
+}
+
+#portfolio-left{
+    grid-area:portfolio-left;
+    width: 32vw;
+}
+.portfolio{
+    display: grid;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: "portfolio-left portfolio-right";
+}
+
+h1{
+    color: purple;
+}
+
+/*----Projects-----*/
+#project1{
+    grid-area: project1;
+}
+
+#project2{
+    grid-area: project2;
+}
+
+#project3{
+    grid-area: project3;
+}
+
+#project4{
+    grid-area: project4;
+}
+
+.projects{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "project1 project2"
+    "project3 project4";
+}
+
+.project{
+    box-shadow: 0 4px 25px rgba(14,36,49,.15);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.project img{
+    height: 20vh;
+    border-radius: 0.5rem;
+
+}
+
+/*----Skills-----*/
+#skill1{
+    grid-area: skill1;
+}
+
+#skill2{
+    grid-area: skill2;
+}
+
+#skill3{
+    grid-area: skill3;
+}
+
+#skill4{
+    grid-area: skill4;
+}
+
+.skills{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "skill1 skill2"
+    "skill3 skill4";
+}
+.skill{
+    box-shadow: 0 4px 25px rgba(14,36,49,.15);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.skill img{
+    height: 20vh;
+    border-radius: 0.5rem;
+
+}
+
+/*------Responsive For Mobile Devices-------*/
+@media screen and (max-width:768px) {
+
+    .portfolio{
+        display: grid;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.1fr;
+        grid-template-areas: "portfolio-left" "portfolio-right";
+    }
+
+    .projects{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "project1" "project2"
+        "project3" "project4";
+    }
+
+    .skills{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "skill1" "skill2"
+        "skill3" "skill4";
+    }
+
+    #portfolio-right{
+        margin-left: 0vw;
+    }
+    
+}

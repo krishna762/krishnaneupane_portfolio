@@ -95,7 +95,7 @@ body{
 
 .main__right{
     margin-right: 14vw;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
 
 .main__right img{
@@ -168,8 +168,9 @@ body{
     
     .nav__toggle{
         display: inline;
-        position: fixed;
+        margin-top: -5vh;
         margin-left: 80vw;
+        margin-bottom: 1vh;
     }
 
     .nav__toggle i{
@@ -214,7 +215,7 @@ body{
     
     .main__right{
         margin-left: 25vw;
-        margin-bottom: 3vh;
+        margin-bottom: 15vh;
     }
     
     .main__right img{
