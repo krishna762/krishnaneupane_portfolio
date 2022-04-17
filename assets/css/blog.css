@@ -1,0 +1,48 @@
+#first-part{
+    width: 20vw;
+    grid-area: first-part;
+}
+
+#second-part{
+    width: 20vw;
+    grid-area: second-part;
+}
+
+#third-part{
+    width: 20vw;
+    grid-area: third-part;
+}
+
+.blog{
+    display: grid;
+    margin-left: 15vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "first-part second-part third-part";
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+/*------Responsive For Mobile Devices-------*/
+@media screen and (max-width:768px) {
+    #first-part{
+        width: 90vw;
+    }
+    
+    #second-part{
+        width: 90vw;
+    }
+    
+    #third-part{
+        width: 90vw;
+    }
+
+    .blog{
+        margin-left: 5vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 0.3fr;
+        grid-template-areas: "first-part" "second-part" "third-part";
+    }
+}
